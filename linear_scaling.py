@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 
 def linear_scaling(values: np.ndarray) -> np.ndarray:
@@ -19,5 +18,4 @@ def linear_scaling(values: np.ndarray) -> np.ndarray:
         a = values_mean / (values_mean - values_min + epsilon)
         b = - values_min * values_mean / (values_mean - values_min + epsilon)
 
-    print(a, b)
     return a * values + b
